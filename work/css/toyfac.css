@@ -1,0 +1,142 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* LAYOUT CSS */
+#layout {
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+    top: auto;
+    margin: 3em auto;
+}
+
+.sidebar {
+    background: #364243;
+    color: #fff;
+}
+
+.brand-title,
+.brand-tagline {
+    margin: 0;
+}
+.brand-title {
+    text-transform: uppercase;
+}
+.brand-tagline {
+    font-weight: 300;
+    color: #adc7ca;
+}
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nav-item {
+    display: inline-block;
+}
+.nav-item a {
+    background: transparent;
+    border: 2px solid #adc7ca;
+    color: #fff;
+    margin-top: 1em;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 85%;
+}
+.nav-item a:hover,
+.nav-item a:focus {
+    border: 2px solid #85ced7;
+}
+.nav-item a[disabled] {
+    border: 2px dashed #eee;
+}
+
+.content-subhead {
+    text-transform: uppercase;
+    color: #aaa;
+    border-bottom: 1px solid #eee;
+    padding: 0.4em 0;
+    font-size: 80%;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+.content {
+    padding: 2em 1em 0;
+}
+
+.item {
+    padding-bottom: 1em;
+}
+.item-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 0.2em;
+}
+.item-title:hover, .item-title:focus {
+    color: #777;
+}
+.item-avatar {
+    float: right;
+    margin-left: 1em;
+}
+.item-description {
+    font-family: Georgia, "Cambria", serif;
+    color: #444;
+    line-height: 1.6em;
+}
+.item-meta {
+    color: #999;
+    font-size: 90%;
+    margin: 0;
+}
+
+.item-tag {
+    margin: 0 0.1em;
+    padding: 0.3em 1em;
+    color: #fff;
+    background: #999;
+    font-size: 75%;
+    border-radius: 2px;
+    display: inline-block;  /* Why this happen? Without this the height of item-meta may be bigger than item-tag */
+}
+.item-tag-qt { background: #80c342; }
+.item-tag-python { background: #3572A5; }
+.item-tag-scala { background: #dc322f; }
+.item-tag-android { background: #6ab344; }
+
+.footer {
+    text-align: center;
+    font-size: 80%;
+    color: #ccc;
+    padding: 1em 0;
+}
+
+@media (min-width: 48em) {
+    .content {
+        padding: 2em 3em 0;
+        margin-left: 25%;
+    }
+
+    .header {
+        margin: 80% 2em 0;
+        text-align: right;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+    }
+}

@@ -1,0 +1,18 @@
+http://krrr.work {
+        redir 301 {
+                if {>Upgrade} not_match [Ww]eb[Ss]ocket
+                / https://{host}{uri}
+        }
+
+        proxy / localhost:1080 {
+                websocket
+        }
+
+        log access.log
+}
+
+https://krrr.work {
+        git https://gitlab.com/krrr/mysite.git
+
+        log browse.log
+}
