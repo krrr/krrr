@@ -12,7 +12,8 @@ http://krrr.work {
 }
 
 https://krrr.work {
-        git https://gitlab.com/krrr/mysite.git
+        root /www/krrr.github.io/work
+        git https://github.com/krrr/krrr.github.io.git ../
 
         log browse.log
 }
