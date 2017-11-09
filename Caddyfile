@@ -1,0 +1,20 @@
+http://krrr.work:8080 {
+        redir 301 {
+                / https://hazama.cc/work
+        }
+        log ../access.log
+}
+
+https://krrr.work:8443 {
+        root /www/krrr.github.io/work
+        tls {
+                dns cloudflare
+        }
+}
+
+http://hazama.cc:8080 {
+        root /www/krrr.github.io/
+        git https://github.com/krrr/krrr.github.io.git {
+                hook /github-pull-webhook yougotme
+        }
+}
