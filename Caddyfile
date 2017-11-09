@@ -16,5 +16,6 @@ http://hazama.cc:8080 {
         root /www/krrr.github.io/
         git https://github.com/krrr/krrr.github.io.git {
                 hook /github-pull-webhook yougotme
+                hook_type github
         }
 }
