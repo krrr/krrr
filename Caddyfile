@@ -6,7 +6,7 @@ http://krrr.work:8080 {
 }
 
 https://krrr.work:8443 {
-        root /www/krrr.github.io/work
+        redir https://hazama.cc/work{uri}
         tls {
                 dns cloudflare
         }
@@ -14,8 +14,5 @@ https://krrr.work:8443 {
 
 http://hazama.cc:8080 {
         root /www/krrr.github.io/
-        git https://github.com/krrr/krrr.github.io.git {
-                hook /github-pull-webhook yougotme
-                hook_type github
-        }
+        ext .html .htm
 }
